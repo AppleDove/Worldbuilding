@@ -1,0 +1,1220 @@
+:: StoryTitle
+Crimes of Camden: Part 2
+
+
+:: StoryData
+{
+  "ifid": "fff7b354-a046-48de-a7b5-cbb7dff477c1",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Warning Screen",
+  "tag-colors": {
+    "Car-driving": "red",
+    "open-file-sound": "yellow",
+    "close-file-sound": "yellow",
+    "door-open": "blue",
+    "Metal-Music": "red",
+    "lock-click": "red",
+    "walk": "green",
+    "Bed-flop": "red",
+    "gentle-wind": "red",
+    "glass-break": "red",
+    "door-knob-jiggle": "red",
+    "blade-sheath": "red",
+    "slice": "red",
+    "run": "orange",
+    "scream": "orange",
+    "hit-impact": "red",
+    "sirens": "red",
+    "smash-door": "blue",
+    "alarm-clock": "red",
+    "knock": "red",
+    "bag-drop": "red",
+    "chair-push": "red",
+    "door-SLAM": "blue",
+    "metal-clink-on-tile": "purple",
+    "car-door-open-and-close": "blue",
+    "fist-on-table": "red"
+  },
+  "zoom": 0.6
+}
+
+
+:: Agree {"position":"550,1150","size":"100,100"}
+You think for a moment, but sometimes you need a friend to set you straight. 
+
+"Yeah, it's not like I'll be able to be productive when I'm this tired. I'll more so risk messing something up." (set:$LockFiles to true)<audio src="https://github.com/AppleDove/Crimes-of-Camden-Audio-files/raw/refs/heads/main/Lock%20Click.wav"autoplay>
+
+"Oh thank god, I thought we were going to have to drag you to a bed."
+
+You chuckle as you place the files in the top drawer of your desk, clicking it with a lock.
+
+(click:"lock.")["Maybe sleep can give us an insight on the case a bit." You glance at him as you pick up the empty coffee cups on your desk. "Who knows, you might be blessed with one of those vision things."
+
+You dump the cups into the trash. "They're not visions Mateo, don't believe everything Grace tells you."
+
+"You don't think they're at least some kind of prophecy?"
+
+"Considering they're wrong sometimes, no I do not."
+
+"If you say so, JJ."
+
+(click:"If you say so,JJ.")[You scoop up your bag, shaking your head with a smile. "If I had a 100% success rate, I'd be winning the lottery in my sleep."
+
+[[travel home]]
+
+
+]]
+
+
+:: Backdoor Entrance [walk door-knob-jiggle] {"position":"550,1750","size":"100,100"}
+I walk through the grass to approching the backdoor. After giving a quick look for any nosey neighbors, I jiggle the knob of the door.
+
+(click:"I jiggle the knob of the door.")[...
+
+(click:"...")[//...Locked. Great.//]]
+
+(click:"Great.")[I don't know what I expected, but doing it the easy way was worth a try. Sliding the blade of my weapon into the gap between the door and wall, I line it up with the lock and push down. Hard. After I hear the lock break, I give the doorknob another try. I have to use a bit of force, but the door swings open. (set:$BackdoorEntrance to true)
+
+
+[[Find Jane Doe]]]
+
+
+:: Beginning {"position":"675,250","size":"100,100"}
+//So tired...//
+
+Blearily, you stare at the mountain of notes before you. Messy scrawls that are incoherant to everyone but yourself litter the pages, evidence of frustration leaking from the pen ink. You slam your head on the desk with a groan, causing a few empty coffee cups to fall on the ground. 
+
+(click:"ground")[The rest of the bureau's staff had left hours ago, but [[you]] and your team had been scrambling to solve your latest case. Local citizen of Camden, New Jersey "Jane Doe" had been murdered in her home by suspect [[Jason Moore.]]] 
+
+
+:: Case Closed {"position":"675,3350","size":"100,100"}
+(if:$KitchenEntrance is true and $Cleaver is true and $RollingPin is true and $WindowExit is true)[Damini nodded in agreement. “That would make sense and hit all the marks." 
+
+"And it lines up with Miss Doe's injuries." Merkaba added, as Mateo put a confident hand on your shoulder. "Not to mention it would explain the pattern of the blood trail Mateo photographed." 
+
+"I knew sleep would do you good JJ!" Your friend looked rather proud of himself, but he was right as much as you didn't want to admit it. You did some great work, let’s get everything put together so we can pass it off to Grace and prepare for trial.”
+
+Mateo disappears back into his office before you have the chance to agree. You're unable to follow him as the bureau's door is slammed open, and in came a very panicked looking Grace Utterson and a couple men you recognized from the local police station. "JISARA!"
+
+(click:"JISARA!")["<audio src="https://github.com/AppleDove/Crimes-of-Camden-Audio-files/raw/refs/heads/main/Door%20Slam%20Open.aiff"autoplay>Grace?" You raised an eyebrow. "Speak of the devil, we were just about to send a final case report over to you-"]](else:)[Damini hummed in thought, taking into consideration what you had said. "Are you sure that's how it happened? It doesn't seem entirely plausible when you put it with the evidence." She flipped through Mateo's folder with the photographs, and Mateo was looking over Merkaba's shoulder at the autopsy report.
+
+"Maybe we should at least run some of this through with Doc, something about my pictures and Jane's injuries don't quite match up."
+
+"Maybe there's something else I have in my office that we can review, hang on, I'll be right back!" Mateo disappears back into his office. 
+
+Before you can tell him to wait, the bureau's door slammed open, and in came a very panicked looking Grace Utterson and a couple men you recognized from the local police station. "JISARA!"]
+
+(click:"JISARA!")[<audio src="https://github.com/AppleDove/Crimes-of-Camden-Audio-files/raw/refs/heads/main/Door%20Slam%20Open.aiff"autoplay>You whipped around, surprised to see your lawyer friend. "Grace?! We're not ready with the case yet-"
+
+"They found her!" Grace exclaimed, desperately grabbing onto you with tears in her eyes and sobs wracking through her body.
+
+"Grace, what are you talking about, who did they find?"
+
+"Emma!" She cries, "They found Emma!"
+
+Speechless, you hold her tight as she clings onto you. One of the cops hands you a clear evidence bag with a letter inside. "This was found on Officer Carraway's body".
+
+//[['On Emma's body...?'|From E.Hyde]]]
+
+
+:: Cleaver [blade-sheath] {"position":"800,2000","size":"100,100"}
+I line my cleaver up to her throat. (set:$Cleaver to true)
+
+(if:$BreakWindow is true)[At the touch of the cold metal, Jane wrinkles her eyebrow just a little bit. Maybe I'm crazy but has her breathing changed?](else:)[At the touch of the cold metal, Jane wrinkles her eyebrow just a little bit before relaxing again.]
+
+As I look down at her sleeping face, I can't help but [[hesitate]].
+
+
+
+
+:: Crank hand mixer [run hit-impact] {"position":"525,2325","size":"100,100"}
+She must've been baking earlier; she grabbed a crank hand mixer that had been washed and sitting out. The handle is coated in her blood from holding her injuries. (set:$HandMixer to true)
+
+I can see she's losing a lot of blood, she's getting whoozy.
+
+(click:"she's getting whoozy")[(if:$BreakWindow is true)[Blood from her neck, arms, and stomach coat her skin making her clothes stick to her body. The path of blood trails her like a red wedding veil. Her hands holding the mixer were shaking beyond control, and she was limping with the glass shards now stuck in her feet.](else:)[Blood from her neck, arms, and stomach coat her skin making her clothes stick to her body. The path of blood trails her like a red wedding veil. Her hands holding the mixer were shaking beyond control, Jane looked like she could barely stand, //how was she still standing?//]
+
+I lunge in to attack.
+
+(click:"I lunge in to attack.")[She swings. She managed to get me in the mouth, some of my own blood getting onto the other end of her makeshift weapon, and runs for the door.
+
+[[I'm getting real sick of this.|Kill Jane Doe]]]]
+
+
+:: Damini [open-file-sound] {"position":"925,725","size":"100,100"}
+Forensic Specialist: Mrs. Damini Poudel
+
+Age: 32
+Pronouns: She/Her
+Ethnicity: Nepali Muslim
+Eye Color: Black
+Hair Color: Wouldn't you like to know, weather boy? (Hijab)
+Blood Type: AB+
+
+Damini works at the Camden New Jersey Detective Bureau as a expert in scientific evidence she analyzes in her lab. Rarely is she active at crime scenes and gets her samples from Mateo to process off-site of the crime. 
+
+Damini is very friendly but serious in her work, always aiming to get correct results first try. She prefers to work alone and in silence while at the lab, though is much more animated when sharing her reports. Sometimes friends such as Mateo use the nickname "Dami" when talking to her, but Damini is very strict about who is allowed to call her that.
+
+[[Go Back|Lab]]
+
+
+:: Defensive {"position":"775,4750","size":"100,100"}
+"When you put it that way, can't say your assessment is incorrect."(set:$henry_trust to it +1) Henry nods. "I can appreciate the process of using a hypothesis."
+
+"As do I. And speaking of," Merkaba segues, Merkaba questions, pushing up their glasses. "Do you have any physical hold on your theory? Any patterns between victims?" 
+
+"Currently the common denominator is they're all some form of //'adult entertainer'//, if you will-"
+
+"With the exception of Emma."
+
+"Yes Mr Raji, that's correct. However while on her undercover operative she was posing as one, which also makes us think this Hyde fellow didn't know she wasn't a cop."
+
+This piques Damini's interest. "You're suggesting a moment of opportunity?"
+
+Grace catches on quickly as well, interrupting before the director could answer Damini.
+
+"But you suspect Hyde of multiple crimes, [[could he have known you were investigating him?" |Info dump]]
+
+
+:: Desk {"position":"675,1025","size":"100,100"}
+You blink back sleep threatening to overtake you as Mateo walks with you towards your desk. Before you can start sifting through them again, you feel a hand on your shoulder.
+
+"Maybe you should sleep on this one, JJ." Mateo suggests. "We won't be able to hand everything off to Grace until the morning anyway."
+
+...
+
+(click:"...")["JJ. If you want to get this done you gotta do it with your head all the way on." 
+
+//He's speaking so sternly, but I need to work...can I even work right now-?//
+
+[["Yeah, it's not like I'll be able to be productive when I'm this tired. I'll more so risk messing something up."|Agree]]
+
+[["You're right about how important this is, that's why I'll finish this now and it'll be ready first thing when she gets in."|Disagree]]]
+
+(set:$MateoTakesFiles to false)(set:$LockFiles to false)
+
+
+:: Detective Henry Canyon [open-file-sound] {"position":"1075,3925","size":"100,100"}
+Homocide Detective: Detective Henry Canyon
+
+Age: 40
+Pronouns: He/Him
+Ethnicity: Navajo
+Eye Color: Grey-Blue
+Hair Color: Black
+Blood Type: A+
+
+Henry works at the New Jersey State Bureau of Investigation as a homocide detective. His investigation style is often described as traditional, and isn't one to stray too far from what many consider texxtbook procedure. He is not fond of taking unnecessary or "foolish" risks.
+
+Damini is very friendly but serious in her work, always aiming to get correct results first try. She prefers to work alone and in silence while at the lab, though is much more animated when sharing her reports. Sometimes friends such as Mateo use the nickname "Dami" when talking to her, but Damini is very strict about who is allowed to call her that.
+
+Henry is a very serious individual, potentially hardened from years in the field. While being adverse to new methods, he does not look down on others for it. He only considers efforts based in suspicion and not fact to be uncouth, but he will admit respect if it succeeds. If it fails? You'll be hearing about it plenty.
+
+
+[[Go Back|into the bureau]]
+
+
+
+
+:: Director Stevenson [open-file-sound] {"position":"1150,3800","size":"100,100"}
+Chief Director of the NJ State Bureau of Investigation: Director Robert Stevenson
+
+Age: 53
+Pronouns: He/Him
+Ethnicity: Welsh
+Eye Color: Blue-Green
+Hair Color: Salt-and-Peppered black hair
+Blood Type: O+
+
+Director Stevenson works at the New Jersey State Bureau of Investigation as the Chief Director of the Homocide Department. He oversees many units and has much experience in the detective field himself. Often Stevenson distances himself from cases enough to observe how different teams will handle different cases, and apply those methods to future cases. He is incredibly calculated and analytical, and additionally has exceptional people-skills attributed to previously being a criminal profiler.
+
+Stevenson is more lighthearted than many would expect from his position. Despite being a boss, he is on generally friendly terms with most his staff, though not close enough anyone would dare not address him as "director".  Stevenson is regarded as the bridge between tradition and innovation at the SBI, and is highly respected. 
+
+
+[[Go Back|into the bureau]]
+
+
+
+
+:: Disagree {"position":"800,1150","size":"100,100"}
+You scrunch your nose, and get ready to dive back into work. "You're right about how important this is, that's why I'll finish this now and it'll be ready first thing when she gets in."
+
+Mateo scowls at you as you turn in your chair. As you go to look through the files again the hand that was resting on your shoulder flies out and snatches them. (set:$MateoTakesFiles to true)
+
+"HEY!"
+
+(click: "snatches them")["These are staying in my office tonight and you're going home with the rest of us." He scoops up the empty coffee cups on your desk and tosses them over in the large trash can. "How much can you really get done with the labs closed, huh? You're just gonna get yourself more limited and keep walking in circles."
+
+You barely have time to process his snappy words and how fast he's moving before he's back in front of you and picking up your bag. //Was he that fast or are you just that tired?//
+
+"Jisara, I know how big of a deal this is, but maybe you can work your magic tonight?"
+
+He looks hopeful, and his tone is a bit gentler than before. If you didn't know any better, he probably felt bad for being so harsh. Now that you think about it, he's just as frustrated as you are. You sigh. 
+
+(click:"You sigh.")["I can't guarentee anything, but if it happens you'll know first thing tomorrow."
+
+Mateo smiles with relief. "As long as we get you back nice and rested in the morning no dream vision is required."
+
+[[travel home]]]
+
+
+]
+
+
+:: Door Exit [smash-door] {"position":"525,2500","size":"100,100"}
+(set:$DoorExit to true)(if:$BackdoorEntrance is true)[The door from my break in is still open. I run through, bloody boots tracking my footprints. That's a problem I will worry about later.](else:)[I make a break for the backdoor. I don't know why, I know that door won't open, but it's the safest way out. I slam my body against the door a couple of times, and eventually the door breaks enough that I can wiggle the door knob and fling open the door. Cool wind hits my face.]
+
+I run. Weapon in hand, bruised and exhausted, I run through the backyard until I reach the trees.
+
+[[I run into the forest with Jane Doe's blood on my hands.|Wake Up]]
+
+
+:: End Screen {"position":"675,5100","size":"100,100"}
+Thank you for playing through parts 1 and 2 of Crimes of Camden!
+
+Interested in what your choices did? Here's how much your teammates and friends trust you!
+
+Mateo: [$mateo_trust]%
+Damini: [$damini_trust]%
+Merkaba: [$merkaba_trust]%
+Grace: [$grace_trust]%
+Henry: [$henry_trust]%
+
+
+:: Examiner {"position":"550,875","size":"100,100"}
+<audio src="https://github.com/AppleDove/Crimes-of-Camden-Audio-files/raw/refs/heads/main/Door%20Opening.wav"autoplay>You make your way to the medical examiner's office with Mateo. (set: $Examiner to true) Inside is the medical examiner [[Merkaba]], diligently wiping down the counters.
+
+(click:"wiping down the counters")["Hey doc!" Mateo greets, "Getting a head start on clean up?"
+
+They hummed, "I've been trying to tidy up while the results processed. Having a deceased body on a table isn't the most pleasant smell, you know."
+
+"I can only imagine." You try to respond in a joking manner as well, but the exhaustion is so clear in your voice it didn't sound how you imagined, but your teammates didn't pay too much mind. "What've you got for me, Merkaba?"]
+
+(click:"Merkaba?")["One autopsy and [[Medical Report]] for you, my 
+dear Jisara!" Merkaba hands you a thin and neatly put together file, each part is sorted and held together by their own paper clips. "Anything I can help you both with before I finish cleaning up here?"
+
+You smile and shake your head. "I'm alright, but maybe you should help Mateo clean his office."
+
+"There is nothing wrong with my office!"
+
+Where next?]
+(click:"Where next?")[(if:$Lab is true and $Office is false)[Go to
+[[Forensic Office|Office]]](else-if:$Office is true and $Lab is false)[Go to
+[[Forensic Lab|Lab]]](else-if:$Lab is true and $Office is true)[[Return to your desk|Desk]](else-if:$Lab is false and $Office is false)[Go to
+[[Forensic Lab|Lab]]
+[[Forensic Office|Office]]
+
+]]
+
+
+:: Fieldwork route {"position":"525,5000","size":"100,100"}
+"No matter how bad this situation is, we cannot risk diving in headfirst. And believe me, I'm always the first person to suggest an unconventional approach." (set:$mateo_trust to it -15)(set:$merkaba_trust to it -5)(set:$damini_trust to it +5)(set:$grace_trust to it +5)(set:$henry_trust to it +5)
+
+"So we waste time playing cat and mouse while Emma's murderer gets to find a new victim?!" Mateo shouts. You're surprised at his sudden volume, so is Damini who flinches away, but it may be warrented, after all. Henry practically jumped at his outburst, and Stevenson gave him a stern look.
+
+"Mr Raji, please, reel it in."
+
+He takes a deep frustrated breath, sinking into his chair. "Right, sorry, maybe JJ's got it right not being so rash."
+
+"Then it's settled." Director Stevenson says, you can't help but think he's disappointed by this outcome. [["Let's get to work."|End Screen]]
+
+
+:: Find Jane Doe [walk] {"position":"675,1850","size":"100,100"}
+(if:$KitchenEntrance is true)[I carefully lower myself down onto the ground. My boots protect me from the glass on the floor, but they become dirty with the garden dirt I picked up. //Someone's gonna have to clean that up.//
+
+(click:"clean that up.")[I make my way out the kitchen to maneuver through the rooms. As I walk across the living room carpet, I could've sworn I heard a movement. Was that a floorboard creaking? I stop and listen, but I don't hear it again and figure it must be me. //My nerves are getting to me.//]](else:)[The door opens to a small mudroom that breaks into a short hallway, leading to the kitchen. I carefully move from the tiled kitchen to the carpeted living room. There are framed photos lining the fireplace mantle. I see myself in one of them and my anger reignites and the nerves are getting to me.]
+
+(click:"My nerves are getting to me")[I walk over to where I know the bedroom is. There's no lock. I push it open and step inside.
+
+(click:"step inside")[A head of blonde hair peeks out from under a duvet. I silently walk over to her, lining up my weapon.
+
+I go to cut her throat with my...
+
+[[Pocket knife]]
+
+[[Cleaver]]]]
+
+(set:$PocketKnife to false)(set:$Cleaver to false)
+
+
+:: Follow Jane [scream] {"position":"675,2250","size":"100,100"}
+I barely can peek out of the bedroom before she's running to another room, holding her bleeding arm.
+
+(if:$BreakWindow is true)[She lets out a shrill scream as she steps on the broken glass from my entrance, but doesn't stop moving.] (else:)[She slides into the kitchen searching for something.]
+
+From the drain board, she grabs a...
+
+[[Crank hand mixer]]
+
+[[Rolling pin]]
+
+(set:$HandMixer to false)(set:$RollingPin to false)
+
+
+:: Forensic Report [open-file-sound] {"position":"900,1000","size":"100,100"}
+Forensic Field Report: "Jane Doe" Homicide
+Mateo Raji
+Date: 6/4/83 10:57 PM
+
+-Photograph of main suspect Jason Moore
+	--White man with black hair and blue eyes, matches photos found printed
+    in a scrapbook in victim's living room. (Was the break-up recent?)
+
+-Photograph of a broken window (inside kitchen)
+	--Window is smashed inwards indicating entry point.
+    
+-Photograph of garden and broken window (outside in garden)
+	--Shoe prints indicate entry point, but none leading out. Was there another exit?
+    
+-Photographs of blood trail
+	--A collection of blood trail photos that appear to range from the kitchen, 
+    bedroom, and living room. (Either body was moved or victim attempted to flee)
+    --Final photo of blood trail appear to end at the victim's body. (found
+    in living room) 
+
+-Photograph of suspected weapons
+	--Rolling pin with blood specks on one end and handlecovered in blood
+    (self defense weapon? Was the victim hit with this in a dispute?)
+    --Cleaver from Jason Moore's residence with blood. (1/4 inch thick blade, 
+    blunt handle, heavy duty bone and meat knife, not vegetable cleaver)
+ 
+ 
+ [[Go Back|Office]]
+ 
+ 
+ 
+       
+       
+      
+
+
+:: From E.Hyde [metal-clink-on-tile] {"position":"675,3475","size":"100,100"}
+Holding Grace with one arm, you take the bag in your outstretched hand. A sense of dread fills every inch of your body, some rancid taste bubbling in your throat. Merkaba places a comforting hand on your shoulder as Damini delicately guides both Grace's and your own shaking form to the floor.
+
+//'An evidence bag...'//
+
+You glance up at the officer, who nods. "It's alright, you can open it, state bureau approved it."
+
+Carefully, you break open the seal of the plastic and peer into it.
+
+(click:"peer into it")[The letter had blood stains on it, pressumably Emmas, and a wax stamp that had been cut open with sugical precision. On the front was the words; "From E. Hyde". Before you can remove the paper, a quiet voice comes from behind you.
+
+"What happened to Emma?"
+
+Mateo is standing a fair distance away. He must've heard from his office. You and your team don't answer him, and neither do the officers or Grace. Merkaba wordlessly makes their way to your friend, slowly and gently bringing him to join your huddle with slow tears of panic welling into his eyes.
+
+The only word you can think of to describe the look on his face, is 'broken'.
+
+You pull out the letter, but there's something else in the envelope, and it falls out. 
+
+(click:"falls out")[[[It's a simple silver ring on a cord.|the engagement ring]]
+
+]]
+
+
+:: Get ready for work [knock] {"position":"675,2725","size":"100,100"}
+You slam your hand down on the off button, and rub your eyes with your hands. You have a pounding headache that only painkillers and coffee can cure. You put on a fresh pot, and while you the coffee brews you hop into a quick shower to wash your sleep away. The pot is nice and hot when you're done, so while you sip you gather your work bag and munch on some toast.
+
+Pretty soon you hear a knock on your door, you open it and see [[Grace]], your friend and lawyer who will be handling the prosecution of the Jane Doe case in court. <audio src="https://github.com/AppleDove/Crimes-of-Camden-Audio-files/raw/refs/heads/main/Door%20Opening.wav"autoplay>
+
+"Hi Grace, ready to [[get a move on?"|Go to Work]]
+
+
+:: Go inside [walk] {"position":"675,2975","size":"100,100"}
+You walk into the bureau to go to your desk. Damini is at the front desk talking to the receptionist. She sees you and smiles. 
+
+"JJ! Did you sleep alright? How are you feeling?"
+
+"I'm alright Dami," you respond. "I think I figured it all out, I'm going to call a meeting with the team to give you a run down."
+
+Damini gasps, leaning in to whisper to you, "Did you have a vision last night?"
+
+"They're not visions, Dami, I'm just dreaming about stuff."
+
+"Maybe, but it's easier to give it a name rather than just say 'ooo I figured it out in a dream'!"
+
+You shake your head with a smile. "If Merkaba is here please let them know we're going to be meeting in a couple minutes, I just need to grab the files from my desk."
+
+She gives you a nod of approval, feeling confident in your strong words. [[You go to sit at your desk|Go to desk]]
+
+
+:: Go to Work [walk] {"position":"675,2850","size":"100,100"}
+"Yup, all set." You grab your bag from the chair and down the rest of your coffee, leaving the mug in the sink to be washed later.
+
+You and Grace walk to the train station, making lighthearted conversation, it isn't until you're half way through your train ride that your friend's voice gets a bit quiter. "Have you heard from Emma by any chance?"
+
+(click:"Have you heard from Emma by any chance?")[You furrow your eyebrows, examining Grace's expression. "Not within the past few days, why?"
+
+"She went out to that one spot in Jersey City, she was helping with some undercover thing. I called her a bit ago and left her a message on the answering machine, but she hasn't called me back. I'm just a bit worried, she usually responds pretty quickly."
+
+You hum sympathetically, thinking for a moment. "To be honest, I didn't even know she was on an undercover operation. How long has it been exactly since you heard from her?"
+
+"Almost two days?"
+
+(click:"Almost two days?")["There's a chance that if she's undercover she's being hosted in a seperate location for her safety." You gently rub her back in an attempt to soothe her, keeping your voice low from the other passengers around you. "If you'd like, we can swing by the station during lunch to ask if they've been in contact with her, that way we know she's safe."
+
+Grace nods, visibly a little more relaxed. "Yeah, let's do that."
+
+The rest of the ride is less tense. As usual, Grace walks you to the bureau on the way to her law firm. "Well, here's your stop. I'll see you for lunch."
+
+[[Go inside]]]]
+
+
+:: Go to desk [bag-drop chair-push walk] {"position":"675,3100","size":"100,100"}
+You plop down your bag and sit at your desk. You see a fresh cup of coffee from a nearby cafe in a to-go cup. There's a small note you recognize is in Damini's handwritting.// 'For star detective JJ!'//
+
+(click:"star detective JJ!")[(if:$MateoTakesFiles is true)[You go to unlock your desk drawer, and remember Mateo had taken the files from you last night. //'Shit.'//
+
+(click: "Shit.")You get yourself back up out of your chair, grabbing the coffee your coworker got for you and head to the forensic office.
+
+"MATEO!"
+
+The investigator opens his lab door, peaking out. "Could I please have the files you held captive from me last night?"
+
+He laughs. "Yeah hold on JJ."
+
+He disappears for a moment, and reappears with the three folders. "Damini said you're calling a meeting?"
+
+"Yup, I think I got it."
+
+"Then let's move!"
+
+]](else:)[<audio src="https://github.com/AppleDove/Crimes-of-Camden-Audio-files/raw/refs/heads/main/Lock%20Click.wav"autoplay>You unlock your desk drawer with a key on your lanyard, and pull out the folders. Giving them a quick look over, you grab the coffee and get yourself up to head to the meeting room.]
+
+You push open the door to the meeting room, and the four of you take your seats. You pass out the folders to your team, which they excahnge and look through. You motion to your coffee and mouth a grateful 'thank you' to Damini, who gives you a thumbs up. Merkaba leans back in their chair, glasses on and looking at Mateo's photographs.
+
+"So Jisara, [[how did he do it?]]"]
+
+
+
+
+:: Grace [open-file-sound] {"position":"900,2675","size":"100,100"}
+Criminal Lawyer: Grace Utterson
+
+Age: 27
+Pronouns: She/Her
+Ethnicity: Irish and English
+Eye Color: Blue 
+Hair Color: Redhead (long 3A)
+Blood Type: A+
+
+Detective JJ’s good friend and lawyer at the neighboring firm “Camden Legal”. In the bureau, Grace works alongside JJ and Mateo to investigate witnesses, collect evidence, conduct research, photograph scenes, and analyze findings to support the prosecution and build a strong case against the perpetrator. She is primarily is at her firm and is not often active in investigations for long periods.
+
+JJ and Grace are very good friends who live in the same apartment complex, but are not roommates. They often travel together. They live in Bordentown NJ, just south of Trenton. They also attended college together.
+
+
+[[Go Back|Get ready for work]]
+
+
+
+
+
+:: Humorous {"position":"575,4750","size":"100,100"}
+"I can't help but agree." Stevenson chuckles. "Sometimes cold hard facts aren't everything, especially if those facts are missing, right Detective Canyon?" (set:$henry_trust to it -2)
+
+Henry seems slightly agitated at that comment. "The courts beg to differ, sir. Guesswork can only take you so far before one begins to sound like a conspiracy theorist."
+
+'Must be quite the rule follower, he might actually be a bit of a wrench in the process, how unfortunate.'
+
+(click:"how unfortunate")["Do you have any physical hold on your theory? Any patterns between victims?" Merkaba questions, pushing up their glasses.
+
+"Currently the common denominator is they're all some form of //'adult entertainer'//, if you will-"
+
+"With the exception of Emma."
+
+"Yes Mr Raji, that's correct. However while on her undercover operative she was posing as one, which also makes us think this Hyde fellow didn't know she wasn't a cop."
+
+This piques Damini's interest. "You're suggesting a moment of opportunity?"
+
+Grace catches on quickly as well, interrupting before the director could answer Damini.
+
+"But you suspect Hyde of multiple crimes, [[could he have known you were investigating him?" |Info dump]]]
+
+
+:: Info dump {"position":"675,4900","size":"100,100"}
+"That's the tricky part, Officer Carraway's case had nothing to do with any of the homocides. She was investigating a trafficing ring with the help of a performer from the Red Light District."
+
+"So no reoccuring injuries?" 
+
+"Vaguely reoccuring, doctor." Henry flips open a folder, and points at a death report similar to those Merkaba draws up at your office. "A lot of stabbing and slicing around the abdomen but our autopsy reports indicate weapons varying. Granted it's a common method of assult, it almost looks like the stabbing is retaliation against an escort, except of course Officer Carraway. Carraway's injuries are much fewer in number. If this is the same guy, then he stopped before he wanted to."
+
+"They began the process before realizing who Emma was."
+
+"Possibly. Though we aren't sure if it's because he knew she was an officer, or if maybe a potential witness made him flee before finishing."
+
+Mateo takes an agonizing breath, rubbing his temples while Damini rubs soothing circles on his back. Damini glances across the table to you and Grace.
+
+"You said these kills are all sex workers, are they-?"
+
+(click:)["No, not sex crimes. No assult, no trace fluid, nothing."
+
+You're putting pieces together in your head as you feel a wave of relief come over your friends.
+
+"Typically if they're a sex worker, they're estranged or distanced from family, less likely to get help from cops, meaning less people who will go out looking for them." You decide to circle back. "In theory someone could pick any one they want as long as they can get her alone, no need to research your victims. Damini may have hit it on the head with a kill of opportunity."
+
+You can practically see the light bulb go off over Mateo's head. "So perhaps the method is premeditated, and the victim is just whoever happens to be the one to walk in at the right time."
+
+You frown. "We're throwing out a lot of 'what-ifs right now, we need to find a way to narrow it down or we won't be getting anywhere.'"
+
+"Alright then Jisara, you're up to bat, how do you believe we should proceed?"
+
+Looking around the room, you weigh your options. 
+
+[["We should take a direct approach." ||Fieldwork route]]
+[["We need to approach this carefully."||Undercover route]]
+
+]
+
+
+:: Jason Moore. {"position":"675,375","size":"100,100"}
+You had known for sure that this guy was the culprit, the results and findings that came from the search warrant of his home made it clear enough, but without an explanation of how the crime occured, you couldn't hand the case files over to lawyers for the prosecution without the basis of a strong argument. 
+
+(click:"argument")[So here you were, waiting impatiently for the lab results to come back from your teammates. To try and gather the facts one more time, you open the perpetrator's [[file|suspect file]].]
+
+
+:: Kill Jane Doe [sirens] {"position":"675,2400","size":"100,100"}
+I pick myself up. //It's just your mouth, she's got like 15 places shes bleeding out of right now, you're not going to let her get away, are you?//
+
+//She is not making it out of her. Not now. There's no other way this ends.//
+
+(click:"There's no other way this ends")[I give a slice to the back of her leg with my (if:$Cleaver is true)[cleaver](else:)[pocketknife], she falls on the living room carpet, blood staining the deep blue carpet into a nauseating brown. It's amazing, she's still trying to crawl towards the door.
+
+Just to get her to stop moving I turn my blade around and slam the handle down on the top of her head. Jane drops, and stops moving. I give her a hard kick where I had cut her stomach, nothing. No gasps of air, not cries, no sound, nothing. //Finally.//
+
+(click:"Finally")[But of course it's not that simple. Sirens are blaring outside, and the sound is only getting louder. A neighbor must've woken up from all Jane's screaming.
+
+//SHIT! I gotta get out of her-!//
+
+I leave through the...
+
+[[Backdoor|Door Exit]]
+
+[[Kitchen window|Window Exit]]
+
+(set:$DoorExit to false)(set:$WindowExit to false)]]
+
+
+:: Kitchen Entrance [walk] {"position":"800,1750","size":"100,100"}
+I know that the backdoor is always locked because the door is stuck shut and Jane hasn't been able to fix it yet, but I know there's a window right above the garden that leads to the kitchen. It's low enough that I can lift myself through it. (set:$KitchenEntrance to true)
+
+I walk up to the window. It's a shame I have to crush some flowers to get to it, but I know I won't be able to get in through a door. One hand comes up to rest on the wall next to the window, and with the blunt handle of my blade, I break it.
+
+(click:"break it")[The breaking of the glass is loud, but not enough where I think a neighbor could hear me. Doing my best to avoid cutting myself on any shards, I climb through. (set:$BreakWindow to true) <audio src="https://github.com/AppleDove/Crimes-of-Camden-Audio-files/raw/refs/heads/main/WindowBreak.mp3"autoplay>
+
+
+(click:"climb through")[[[Find Jane Doe|Find Jane Doe]]]]
+
+
+<audio src=""autoplay>
+
+
+:: Lab [Metal-Music] {"position":"800,875","size":"100,100"}
+Mateo leads you to the forensic lab, heavy metal music blasting so loud you could hear it through the door. (set: $Lab to true)
+
+Your forensic specialist [[Damini]] is doing air squats while browsing through a stack of notes half crumpled in her grip. She has not noticed your entrance, too engrossed in her...activity?
+
+(click:"activity")[You click off the radio sitting on one of the tables. Damini looks up at the silence, and smiles at you both. "Hi! I have the reports ready"
+
+Cheerfully she hands you the [[Lab Report]]. It's a yellow paper folder with sticky notes with annotations poking out.]
+
+(click:"out")["Thanks Damini. I'll be sure to put these to good use. You've done great work tonight."
+
+"Thank you JJ, I'm super ready to get to bed though so be quick!"]
+
+(click:"be quick")[Where next?
+(if:$Examiner is true and $Office is false)[Go to
+[[Forensic Office|Office]]](else-if:$Office is true and $Examiner is false)[Go to
+[[Medical Examiner's Office|Examiner]]](else-if:$Office is true and $Examiner is true)[[[Return to your desk|Desk]]](else-if:$Office is false and $Examiner is false)[Go to
+[[Forensic Office|Office]]
+[[Medical Examiner's Office|Examiner]]]]
+
+
+:: Lab Report [open-file-sound] {"position":"1000,950","size":"100,100"}
+Forensic Lab Report: "Jane Doe" Homicide
+Specialist: Damini Poudel
+Date: 06-04-1983 11:29PM
+
+
+Biological Evidence:
+-Hair fibers: 2 samples
+    	- Black in color, wavy pattern
+    	- Blonde in color, long and straight. Found in clump which suggests cutting
+            
+-Fingerprints: Jason Moore: Match
+    
+-Ectoplasmic/Blood Samples: 2 samples identified
+    	- O+ blood sample, found in abundance. Match with victim's blood type.
+    	- B- blood sample, found scarcely. Suggests a struggle, match to 
+            suspect Jason Moore's blood type.
+            
+-Trace evidence:
+   		- Glass shards found on kitchen floor
+   		- Garden soil on kitchen floor and windowsil
+   		- Paint chips found on floor by the backyard door, freshly chipped off door,
+    suggest escape route?
+   		- Garden soil on boots found in suspect Jason Moore's home match the garden
+    soil outside Jane Doe's home. Shoe size men's 9, soles match footprints found
+    in the garden.
+    
+Firearms/Weaponry:
+   		- Butcher knife/cleaver recovered in home of suspect Jason Moore
+    covered in O+ blood. (Main weapon?)
+   		- Rolling pin found with B- blood specks on one end and handle on opposing
+    end covered in O+ blood. (unconventional, spur of the moment self defense?)
+    
+    
+    [[Go Back|Lab]]
+    
+    
+    
+
+
+:: Mateo [open-file-sound] {"position":"500,675","size":"100,100"}
+Field Investigator: Mr. Mateo Raji
+
+Age: 29
+Pronouns: He/They
+Ethnicity: Nigerian (Yoruba)
+Eye Color: Hazel
+Hair Color: Black (4C texture)
+Blood Type: B+
+
+Mateo works at the Camden New Jersey Detective Bureau gathering evidence, obtaining samples, and photographing crime scenes. He works most-closely with detectives as he is a bridge between fieldwork and labwork. It is Mateo's job to relay information and translate for his teammates when they're limited by their expertise.
+
+He has a strangely bubbly personality for his line of work. It's clear Mateo has a kind if not impulsive personality with a resilient mind. He has a messy process, but he gets great results-- even if it looks like a bull ran through the room while he worked.
+
+[[Go Back|investigate]]
+
+
+:: Medical Report [open-file-sound] {"position":"375,950","size":"100,100"}
+Autopsy and Medical Report: "Jane Doe" Homicide
+Performed by: Dr. Merkaba Cohen
+Date: 06.04.1983 11:18PM
+
+Deceased's name: Jane Doe
+-Date of death: 06.01.1983 2:42AM
+-Type of death: Violent
+-Cause of death: Blunt force head trauma (struck top left of skull)
+-Description of body:
+	--Sex: F
+   -- Race: White
+    --Age: 26
+    --Eyes: Green
+    --Hair: Blonde
+   -- Blood Type: O+
+   --Weight: approx 134 lbs
+    --Length: 5 feet and 4 inches
+    --Rigor Mortis: Yes
+    --Lysis: No
+   -- Clothing: Partially clothed (Found in night dress, underwear, and socks.)
+
+-Additional injuries:
+	--Multiple smaller abrasions and lacerations on arms and stomach; 2 on legs, 2 on 
+    stomach, 5 on arms, 1 on face near mouth, and 1 on right side of victim's neck. 
+    Total 4 deep cut lacerations; 3 on arms and 1 on left cheek. Single avulsion on 
+    victim's right leg. All cuts seem to have been made with a 1/4 inch thick blade.
+    --Glass shards are stuck in the bottom of her feet.
+    --Victim appears to have been kicked in right side of ribs after passing (lack of 
+    bruising with a fractured rib, would have bruised very quickly if alive.)
+   
+-Medical Report:
+    --No signs of sickness before death
+    --No signs of alcohol or drugs in system
+    --No signs of poisoning
+    --Signs of high stress; Veins and arteries shows signs of experiencing high 
+    anxiety right before death, victim was awake well before being attacked.
+    --No signs of sexual assult
+    --No signs of foriegn or non-consumable entities
+    
+-Additional notes:
+    --Blood and skin tissue were found under the victim's nails. Signs of 
+    an altercation/fighting back. Victim and culprit's blood managed to mix 
+    together as various samples come back as both Type O+ and Type B-.
+    
+    
+    [[Go Back|Examiner]]
+    
+    
+
+
+:: Meeting Start [chair-push] {"position":"675,4250","size":"100,100"}
+You all pull out your chairs, sitting yourselves at the dramatically long table.
+
+You glance to your right, Grace seated directly next to you. She hasn't said a word to you, or anyone. You discretely place you hand over hers, she gives you a squeeze as if to thank you. She's still pretty shaken up about what happened to Emma, you can feel it.
+
+Henry is on your left. Across him is Damini, then Mateo, then Merkaba. At the head of the table between Merkaba and Grace is Director Stevenson.
+
+Leaning forward onto the table by your elobws, you turn your attention to the man in charge. "I guess I'll ask the burning question, [[what's the word on Hyde?"|What's the word?]]
+
+
+
+
+:: Merkaba [open-file-sound] {"position":"400,725","size":"100,100"}
+Medical Examiner: Dr. Merkaba Cohen
+
+Age: 45
+Pronouns: They/Them
+Ethnicity: Jewish Dominican (Sephardic Jewish)
+Eye Color: Green
+Hair Color: Black (3A texture)
+Blood Type: O+
+
+Merkaba works at the Camden New Jersey Detective Bureau performing autopsies and drawing up medical reports which contain a person's injuries, cause of death, and time of death. They often cross-reference blood samples with the forensic department if multiple blood samples are identified at a scene. 
+
+Merkaba is incredibly social and talkative, working in a place where the other people in the room don't talk back can get pretty lonely. They are also the oldest of the team, yet their charismatic personality eliminates any possibility of creating a seniority dynamic within the team. However, that doesn't stop their age and experience from coming through in their vocabulary.
+
+[[Go Back|Examiner]]
+
+
+:: Offer a friendly greeting {"position":"575,4100","size":"100,100"}
+"Please, call me Jisara." You smile, stepping forward and shaking his hand firmly. (set:$henry_trust to it +2)"If we're to be working together I'd prefer to be called something I'm more accustomed to."
+
+"Are you not often referred to as detective?" Henry asks with a slight quirk of his brow.
+
+"Not often by my teammates. It's usually Jisara or JJ."
+
+"JJ? You and your team must be quite close."
+
+"Very close" you confirm, giving a glance at the three behind you. "We've gone through quite a bit together, you can't help but bond."
+
+He smiles, giving you a warm hand on the shoulder. "I see. In that case, feel free to call me Henry."
+
+[[Take a seat|Meeting Start]]
+
+
+
+
+:: Offer a professional greeting {"position":"775,4100","size":"100,100"}
+"Yes, it's a pleasure to meet you Detective Canyon." You step forward and firmly grasp his hand and give a sturdy shake. (set:$henry_trust to it +5)"I'm sure we will do good work together."
+
+"I agree Detective Graham, it's an honor to work with individuals who have done so much so quickly."
+
+Ego stroked every so slightly, you chuckle. "Please, call me Jisara."
+
+"Then you may address me as Henry."
+
+[[Take a seat|Meeting Start]]
+
+
+:: Office {"position":"675,875","size":"100,100"}
+<audio src="https://github.com/AppleDove/Crimes-of-Camden-Audio-files/raw/refs/heads/main/Door%20Opening.wav"autoplay>Mateo pushes the door to his office open. (set: $Office to true) To put simply, it looks like you just walked into a disaster zone.
+
+(click:"disaster zone")[Photographs were sprawled everywhere, many containing notes in the margins and on top of images in red ink, others having red circles and arrow, some both. notebook paper covered his desk in front of the bulletin board, which were filled with pinned together photos, notes, records that had been pulled presumabilly from the archive. Polaroids were also previlent, and the red string you see conspiracy theorists use really ties it all together. Yikes.]
+
+(click:"Yikes")["Wow. I see you put your photo copier into over-drive with this one."
+
+Mateo chuckled, slapping the top of the machine as if it was the hood of a truck. "Yup, using that sweet, sweet company printer-ink money." He picks up a file labeled [[Forensic Report]] buried under papers on his desk and hands it to you. "Come over here, look what I came up with."] 
+
+(Click:"Come over here")["Don't worry, I put everything in nice and organized in there, it's not anything like this."
+
+Not a single thing pegged on that board could even be remotely categorized as organized. Photos were accompanied by stick figure drawings akin to a toddler's sketches, two copies of the suspect report were annotated in red, and polaroids of the crime scene had red string looping through them as if they were a map. How on Earth he could have found a way to translate this? Beats you, but he somehow always does it.
+
+"Promise?" You say with a dry tone. Mateo mocks offense at the comment.
+
+"Of course! No one else can understand my genius anyways" That makes you roll your eyes as you playfully swat him with the folder.
+
+Where next?]
+(click:"Where next?")[(if:$Examiner is true and $Lab is false)[Go to
+[[Forensic Lab|Lab]]] (else-if:$Lab is true and $Examiner is false)[Go to
+[[Medical Examiner's Office|Examiner]]](else-if:$Lab is true and $Examiner is true)[[Return to your desk|Desk]](else-if:$Lab is false and $Examiner is false)[Go to
+[[Forensic Lab|Lab]]
+[[Medical Examiner's Office|Examiner]]
+
+]]
+
+
+:: Pivot to State Bureau [Car-driving] {"position":"675,3725","size":"100,100"}
+The ride is quiet. It's what you expected, honestly. You'd be much more surprised if anyone had anything to say. 
+
+It was a rough few days, with your entire team excused to grieve, but hardly enough of what you would qualify for such a major loss. A close friend, a fiancée, and then you want her loved ones to investigate her death? You can't help but think it's ironic- Emma would hate this.
+
+As upsetting as the situation is, no one looks worse than Mateo. The ring and cord has been strung around his neck like a pendant, not once has he stopped fiddling with it. 
+
+Your team opted to all stay together during your 3 days off, Merkaba having offered everyone stay with them and their wife. You all thought it was good to not be alone, especially not Mateo. It took two days before he was ready to read the letter with everyone, which you thought may have madde his state worse, but Damini this morning had mentioned to you that everyone being together must've been healing, "I can't imagine he would've passed his psych eval after being by himself", she had said, "we should choose to take this as a good sign for now, small wins."
+
+It's been taking everything in you since getting in this car to not say anything to your friend next to you. Should you do something?
+
+[[Try to lighten the mood with a joke|make a joke.Car]]
+[[Offer Mateo comfort|silent comfort.car]]
+[[Say nothing |Say nothing.Car]]
+
+
+:: Pocket knife [blade-sheath] {"position":"550,2000","size":"100,100"}
+I line my pocket knife up to her throat. (set:$PocketKnife to true)
+
+(if:$BreakWindow is true)[At the touch of the cold metal, Jane wrinkles her eyebrow just a little bit. Maybe I'm crazy but has her breathing changed?](else:)[At the touch of the cold metal, Jane wrinkles her eyebrow just a little bit before relaxing again.]
+
+As I look down at her sleeping face, I can't help but [[hesitate]].
+
+
+
+
+:: Rolling pin [hit-impact run] {"position":"800,2325","size":"100,100"}
+She must've been baking earlier; she grabbed a rolling pin that had been washed and sitting out. The handle is coated in her blood from holding her injuries. (set:$RollingPin to true)
+
+I can see she's losing a lot of blood, she's getting whoozy.
+
+(click:"she's getting whoozy")[(if:$BreakWindow is true)[Blood from her neck, arms, and stomach coat her skin making her clothes stick to her body. The path of blood trails her like a red wedding veil. Her hands holding the rolling pin were shaking beyond control, and she was limping with the glass shards now stuck in her feet.](else:)[Blood from her neck, arms, and stomach coat her skin making her clothes stick to her body. The path of blood trails her like a red wedding veil. Her hands holding the rolling pin were shaking beyond control, Jane looked like she could barely stand, //how was she still standing?//]
+
+I lunge in to attack.
+
+(click:"I lunge in to attack.")[She swings. She managed to get me in the mouth, some of my own blood getting onto the other end of her makeshift weapon, and runs for the door.
+
+[[I'm getting real sick of this.|Kill Jane Doe]]]]
+
+
+:: Say nothing.Car [car-door-open-and-close] {"position":"800,3850","size":"100,100"}
+You don't say anything, you keep your eyes trained on the ground, trying your best to focus on keeping your thoughts quiet.
+
+You pull up to a expansive building, complete with gates and plenty of security.
+
+[[Go inside the building|into the bureau]]
+
+
+:: Undercover route {"position":"825,5000","size":"100,100"}
+"The situation is urgent, we don't have time to tip toe around. We need to be as direct as we can to nip this in the bud. I suggest another undercover operative to lure Hyde out." (set:$mateo_trust to it +15)(set:$merkaba_trust to it +5)(set:$damini_trust to it -5)(set:$grace_trust to it -15)(set:$henry_trust to it -5)
+
+"Are you serious?!" Grace exclaims, causing the entire room to jump. "We JUST lost Emma from this, and now you're suggesting we sacrifice someone else??"
+
+"Ms Utterson! Please, we will not be sacrificing anyone!"
+
+The lawyer you knew to be so calm and composed in the court had her strong demeanor washed away, slooked like she was about to cry. taking a shaky breath, she sinks into her chair. "I apologize, I didn't mean to become so worked up, but I won't disagree. If JJ thinks it'll work, I'll support it."
+
+"Then it's settled." Director Stevenson claps, clearly thrilled at the solution you've suggested. [["Let's get to work."|End Screen]]
+
+
+:: Wake Up {"position":"675,2600","size":"100,100"}
+You jolt up out of bed, blanket falling onto the floor. It takes you a moment to realize that it wasn't a police siren you were hearing, but the sound of your alarm clock. <audio src="https://github.com/AppleDove/Crimes-of-Camden-Audio-files/raw/refs/heads/main/Alarm%20clock%20beep.wav"autoplay>
+
+[[Get ready for work]]
+
+
+:: Warning Screen {"position":"675,125","size":"100,100"}
+WARNING
+
+This game contains mentions of death, homicide/murder, assult, violence, and brief mentions of domestice abuse and alcohol.
+
+Please proceed with caution.
+
+
+[[click to begin|Beginning]]
+
+(set:$mateo_trust to (max: 0, 100))(set:$damini_trust to (max: 0, 100))(set:$merkaba_trust to (max: 0, 100))(set:$grace_trust to (max: 0, 100))(set:$henry_trust to (max: 0, 100))(set:$lucy_trust to (max: 0, 100))
+
+(set:$mateo_trust to 75)(set:$damini_trust to 75)(set:$merkaba_trust to 65)(set:$grace_trust to 90)(set:$henry_trust to 50)(set:$lucy_trust to 35)
+
+
+:: What's the word? {"position":"675,4400","size":"100,100"}
+"How I see it, we can go about taking this guy down two ways." The director sets his folded hands on the table, leaning forward. "We either go straight in for 'em, or we can dance around."
+
+"Dance around?"
+
+"He means collecting samples and investigating the scene of the crime." Henry sighs. 
+
+"//Crimes.//" Stevenson corrects, standing from his seat. "We suspect Officer Carraway's killer to be connected to a few others."
+
+Opening a breifcase, the director pulls out a small collection of files. You recognize some of them as crimes that have passed through your bureau, but none yours.
+
+"Now usually, this would be a case handled strictly in Jersey City where the crime occurred, but since a Camden officer was taken out, we've upped the case to 'State', no longer dealing with a local kill."
+
+You furrow your eyebrows.
+
+[["But the crime still took place in Jersey City, officer or not. Why give information to outside investigators for a government case?"|Why us? (Suspicious)]]
+[["So why are we involved? We're the last people who should be working on this case."|Why us?(Agitated)]]
+
+
+
+
+:: Why us? (Suspicious) {"position":"800,4525","size":"100,100"}
+"I suppose that's a fair question, in this line of work there are procudures that keep loved ones away from crimes related to those they know." (set:$merkaba_trust to it +5)(set:$damini_trust to it +5)(set:$henry_trust to it -5)
+
+"And is this not a breach of procedure?"
+
+"Without a doubt, but your team is familiar with being unconventional, Detective Graham, that's why you're here."
+
+Your eyes immediately shoot to Grace, who in your field of vision looked just as suspicious as you felt. You glance across the table to your teammates who are all looking at you, surprised. You're not typically called out on how you solve cases, as long as you get the right answers.
+
+[["Guess that's why we're so good, not enough people make use of their intuition nowadays."|Humorous]]
+[["I don't see anything unconventional about making use of theories, is that not what you did moving Emma's case to state?"|Defensive]]
+
+
+
+
+
+:: Why us?(Agitated) [fist-on-table] {"position":"550,4525","size":"100,100"}
+"Jisara!" Mateo's hand comes slamming down on the table. He looks hurt, but surprised at your agitated tone. Grace gasps and frowns at you with an expression that's a mix of betrayal and shock. (set:$mateo_trust to it -10)(set:$grace_trust to it -5)(set:$henry_trust to it +2)
+
+"Hey, all I'm saying is by getting our team in, the case becomes emotionally charged, that creates so many liabilities." You shoot your hands up, similar to if a cop told you to 'freeze'. "What are the odds of us making more mistakes than answers being found?"
+
+"Jisara has a point, Mateo." Merkaba interjects. "There are rules in place preventing this very meeting, and I for one don't fancy the thought of examining my friend's corpse." 
+
+"And I can't say it's very easy stomaching the idea of testing Emma's DNA." Damini agrees.
+
+"It's very reasonable and expected that you all have this concern. You all have a reputation for being...//unconventional//...if you will. The decision was made believing your bizarre methods of seeming to fill in holes rather quickly will be very useful here."
+
+You glance across the table to your teammates who are also glancing around at one another. You're not typically called out on how you get there, as long as you get the right answers. Grace squeezes your hand.
+
+[["Guess that's why we're so good, not enough people make use of their intuition nowadays."|Humorous]]
+[["I don't see anything unconventional about making use of theories, is that not what you did moving Emma's case to state?"|Defensive]]
+
+
+
+
+
+:: Window Exit [run] {"position":"825,2500","size":"100,100"}
+(set:$WindowExit to true)(if:$BreakWindow is true)[Climbing through a broken window isn't ideal, but I already did it once and the backdoor can't open, so it's my best bet. I hoist myself up and ignore the feeling of the glass stabbing through my skin.] (else:)[Going out the door that I came in can't be too smart, one of the neighbors is probably keeping an eye on it, I did leave it wide open. I break for the kitchen. There's a window, and with all the strength I have left I smash it, glass flying out into the garden and onto the flowers. <audio src="https://github.com/AppleDove/Crimes-of-Camden-Audio-files/raw/refs/heads/main/WindowBreak.mp3"autoplay>]
+
+I hoist myself up and ignore the feeling of the glass stabbing through my skin. I practically jump out the window and into the moist soil. The soft ground makes me lose my balance and roll onto the grass.
+
+//I really did it.// Bruised and exhausted, I run through the backyard until I reach the trees.
+
+[[Jane Doe's blood is on my hands.|Wake Up]]
+
+
+
+
+:: bed time {"position":"675,1375","size":"100,100"}
+<audio src="https://github.com/AppleDove/Crimes-of-Camden-Audio-files/raw/refs/heads/main/Bed%20Flop.MP3"autoplay>You crash onto your bed, a million thoughts rushing over you but none comprehensible. 
+
+You need to close your eyes. 
+
+(text-colour:(hsl:0,0,1,0.8))[You need to shut your brain off. ]
+
+(text-style:"blur")[(text-colour:(hsl:0,0,0.5333,0.4))[You need the voices to quiet down.]]
+
+(text-style:"blur")[(text-colour:(hsl:0,0,0.5333,0.55))[Stop thinking.]
+
+(text-colour:(hsl:0,0,0.5333,0.25))[Stop running.]
+
+(text-colour:(hsl:0,0,0.5333,0.1))[Stop breathing].]
+
+Your heavy body sinks deeper into the feeling of sleep. After such a long day, you finally [[allow rest to take over.|dream start]]
+
+
+
+
+:: close file [close-file-sound] {"position":"675,625","size":"100,100"}
+Shutting the pale yellow file, you reach for a coffee cup you could've sworn had more in it. Desperately you drink down what little there is left, barely being coherant enough to hear the footsteps approaching you.
+
+(click:"you.")["JJ! You still able to hold your head [[up|investigate]]?"]
+
+
+:: dream start [gentle-wind] {"position":"675,1500","size":"100,100"}
+The second your head hit the pillow you were out. Yet the second your eyes shut it was as if they had snapped back open again.
+
+But you weren't in bed. You were somewhere entirely different. 
+
+(click:"You were somewhere entirely different.")[You're standing. You can smell fresh cut grass and feel the cool wind on your skin. You don't feel tired, that was all gone now. Now, all you felt was rage. At what exactly? You can feel it. Hot blood pumping through your veins and heart pounding in your chest. Your head buzzing so loudly you can't hear yourself think. 
+
+Where did this come from? Does it matter why if as long as you feel it the anger exists?
+
+(click:"exists?")[From somewhere, who knows where, everywhere? Someone, you don't know who, it may not even be one, speaks to you; "Who are you?"
+
+For a second, everything was quiet, as if no one had asked anything at all. 
+
+You answer into the silence.
+
+(click:"You answer into the silence.")[[“I am Jason Moore.”]]]]
+
+
+:: hesitate [slice run] {"position":"675,2125","size":"100,100"}
+(if:$BreakWindow is true)[I take a deep inhale, but right before I can commit, Jane rolls out which causes the blade to scrape across her neck. It's non fatal, but the smell of blood knocks me out of my shock.
+
+//She was awake-!//](else:)[I inhale and slice, but something in me makes me pull back. I cause a non fatal cut on her neck, cursing under my breath as she wakes up in panic and shock.
+
+]Jane's hand slies to her neck as she scrambles out of her bed. I go to grab onto her and try to stab her stomach, I get a couple scrapes in on her arms which she used to block her stomach, and one on her arm that's nice and deep. She somehow got some scratches and kicks on me which is enough to make me let her go for a moment. Seriously, how can fingernails dig so deep? She bolts out the door, and I [[follow her|Follow Jane]].
+
+
+
+
+
+:: how did he do it? {"position":"675,3225","size":"100,100"}
+Nodding to the doctor, you begin. "First, Jason Moore entered through (if:$KitchenEntrance is true)[the kitchen window after smashing it, which is how the glass appeared inside, and why there are footprints in the garden indicating entrance.](else:)[the backdoor, which he had to break to get in.]" Then...
+
+(click:"Then...")[(if:$Cleaver is true)["He had a cleaver in his possession, which would explain the thick 1/4 inch cuts as well as the fact the blood covered cleaver was found in Jason Moore's residence.](else:)["He entered Jane Doe's home with a pocket knife, which is easy to transport and conceal.] The weapon was brought from his own home, not found on-scene."
+
+(click:"on-scene")["However, it was not an easy fight. (if:$BreakWindow is true)[We can pressume the breaking of the window alerted Jane of an intruder.](else:)[Jane was asleep in her room when Jason attacked.] When he went to initially slit her throat, the cut was non-fatal, and the victim went into a state of fight or flight, which resulted in an initial attack before she fled from the kitchen to grab a (if:$RollingPin is true)[rolling pin.](else:)[rotary hand mixer.] Jane Doe had managed to arm herself for defense."
+
+(click:"defense")["They fought before Jason Moore sliced the victim's leg as she tried to escape the front door. To halt her movements he used the blunt handle of his (if:$Cleaver is true)[cleaver](else:)[pocket knife] which resulted in Jane Doe dying from the blunt force head trauma after experiencing severe blood loss. To make sure she wasn't playing dead, our culprit kicked her in the ribs."
+
+(click:"kicked her in the ribs")["However even though he had successfully managed to kill his target, Jason was not out of the woods yet. As we know the neighbor heard Jane Doe's screams and commotion from the house, and made a call to 911. Unable to clean up his crime, the murderer was forced to flee out of the (if:$WindowExit is true)[kitchen window](if:$BreakWindow is true)[he had entered in."](else:)[after smashing it and climbing out."](else:)[backdoor, (if:$BackdoorEntrance is true)[which had been previously left open from his initial break in."](else:)[but because the door was jammed shut he needed to smash it open to escape, as indicated by the wood and paint chips found in the house. Leaving through the backdoor also explains why there were no footprints found leading out of the garden."]]
+
+You lean over the table, looking at your team, digesting what you had to say. "[[That is how Jason Moore commited the murder of Jane Doe.|Case Closed]]"]]]]
+
+
+
+
+:: into the bureau [walk] {"position":"675,3975","size":"100,100"}
+You all step out of the car, and are escorted in by security through a bustling bureau, much more expensive and larger than the one in Camden, into a meeting room where two men were waiting with Grace, all seated in chairs.
+
+(click:"chairs")[<audio src="https://github.com/AppleDove/Crimes-of-Camden-Audio-files/raw/refs/heads/main/Door%20Opening.wav"autoplay>
+"Homicide Squad of the Camden Detective Bureau, I am [[Director Stevenson]], thank you for coming. It's great to meet such a renowned team, I apologize it had to be under such circumstances." He stands from his chair and firmly shakes your hands. He begins with the doctor, you hear a quiet 'my condolences' to Mateo as he goes around. He gets to you and meets you with an enthusiastic expression.
+
+"You've been doing great work, and you have great people with you, New Jersey is proud to have you serving. You've made quite the name for yourself I hear!"
+
+"Like you said sir, I have great people working with me."
+
+"And they have a great leader. Speaking of leaders," The director turns and presents the younger man who had also stood up and been waiting very politely. "And this here is [[Detective Henry Canyon]], he will be working with you all on this case. Your 'co-captain' if you will."
+
+(click:"if you will")["A pleasure" he says, nodding his head. He offers his hand to you first. "You're Detective Graham, yes?"
+
+[[Offer a friendly greeting]]
+[[Offer a professional greeting]]
+
+
+]]
+
+
+
+:: investigate {"position":"675,750","size":"100,100"}
+You look to your left. Your field investigator [[Mateo]] is standing over your desk with what appears to be freshly printed papers.
+
+"Hey Mateo, I'm just trying to make sense of what I can from your photographs."
+
+"Well good news, the forensic and medical reports are back. Damini sent me to come get you. If you want we can go check out their stuff first, or you can swing by the forensic office with me to look at what I've put together."
+
+"I think we should start with the..."
+
+[[Forensic Office|Office]]
+[[Forensic Lab|Lab]]
+[[Medical Examiner's Office|Examiner]]
+
+(set: $Office to false)(set: $Lab to false)(set: $Examiner to false)
+
+
+:: make a joke.Car [car-door-open-and-close] {"position":"550,3850","size":"100,100"}
+(set:$mateo_trust to it -1)
+
+You glance over to Mateo.
+
+"So, it's a good thing your blood type is B positive huh? We gotta be doing a lot of that right now."
+
+Silence. Heat rises from your cheeks and ears the longer the silence goes on. Mateo's face is scrunched up in a way you can't describe other than 'ugh'.
+
+Awkwardly you look across you. Damini is squeezing her eyes shut as if to delete you ever speaking from her memory. Merkaba is staring into your soul with the power of a thousand parents about to smack you upside the head.
+
+You do your best to swallow your embarassment as the car pulls up to a expansive building, complete with gates and plenty of security.
+
+[[Go inside the building|into the bureau]]
+
+
+:: silent comfort.car [car-door-open-and-close] {"position":"675,3850","size":"100,100"}
+(set:$mateo_trust to it +2)
+
+Without saying anything, you place a gentle hand over Mateo's balled up fists.
+
+He stops fidgetting for a moment, and takes a deep breath. You keep your eyes trained ahead, still not looking at him, just sitting in silence. If you were even the slightest bit less attentive you would've missed a quiet 'thank you'. 
+
+You pull up to a expansive building, complete with gates and plenty of security.
+
+[[Go inside the building|into the bureau]]
+
+
+:: suspect file [open-file-sound] {"position":"675,500","size":"100,100"}
+Name: Jason Moore.
+
+D.O.B: January 12, 1957 (26 as of case)
+Sex: Male
+Race: White
+Eye Color: Blue
+Hair Color: Black (short, 2A texture)
+Blood Type: B-
+
+Relation to Victim:
+-- Previous boyfriend
+-- High school classmates
+
+Criminal History:
+-- Domestic abuse
+-- DUI (count on 2 occasions)
+
+[[close file]]
+
+
+:: the engagement ring {"position":"675,3600","size":"100,100"}
+Mateo's hand shoots out before anyone else can even think of grabbing it. The metal bumps on his own silver band as he clammors for the ring. The disheveled investigator is shaking now, pools of grief pouring from his eyes.
+
+Damini acts quickly, getting the doctor and one of the officers to help bring Mateo away to a more private space. You hand the bag back over to the officer. "We will read it together, but not now. Mateo doesn't need this now. //We// dont need this now."
+
+He nods respectfully as he takes it back. 
+
+"What is this all about?"
+
+(click: "What is this all about?")[Grace's voice cracks, barely able to get the words out. "You don't just hand down evidence, lawyers don't even get access to things like this during trial, why bring this to us this way?"
+
+She lifts her head from your shoulder, voice getting louder and angrier.
+
+"What POSSIBLE reason could you have for telling us this way?!"
+
+The officer, who had been doing so well keeping a neutral expression, seems to crack for a moment. He swallows thickly, turning his attention to you.
+
+[["Detective Graham, The State Bureau of Investigation requires you and your team for a new case."|Pivot to State Bureau]]]
+
+
+:: to apartment [walk] {"position":"825,1400","size":"100,100"}
+It was torture trying to force your legs and aching back to cary you home, but walking up the stairs to your apartment with the promise of your cozy bed felt like hevean. It was the equivalent of the scent of pie making you float to a windowsill in a comic strip. 
+
+//'God I need my bed.'//
+
+(click:"'God I need my bed.'")[<audio src="https://github.com/AppleDove/Crimes-of-Camden-Audio-files/raw/refs/heads/main/Door%20Opening.wav"autoplay>Pushing open your door, you practically threw off you shoes as you made a beeline for the bedroom. You couldn't be bothered to change clothes, you can regret that in the morning, every precious wink of sleep counts.
+
+[[bed time]]
+
+]
+
+
+:: travel home {"position":"675,1250","size":"100,100"}
+When Merkaba and Damini finally walk out together you can feel the tension in your shoulders melt away as the realization that you're finally going to shut off your brain sets in. 
+
+It's a good thing you're not leaving alone, because there's a very real chance you'll pass out before you make it back. 
+
+[[walk|walk home]]
+
+
+:: walk home [walk] {"position":"825,1275","size":"100,100"}
+The 2 block walk to the train station felt more like 2 miles, and you were practically falling asleep on Damini waiting for the 1AM train. You felt jealous knowing Mateo got to get on his train earlier, so you and Damini had to rely on Merkaba's endless energy to keep you concious. 
+
+When you did get on the train you were thankful you didn't have as long of a commute as Damini did. You were convinced that too much longer, and you'd be found 6 hours later curled up on the seats.
+
+[[go home|to apartment]]
+
+
+:: you [open-file-sound] {"position":"500,350","size":"100,100"}
+You are Detective Jisara Jade "JJ" Graham
+
+Age: 27
+Pronouns: They/She
+Ethnicity: Afro-Latina (Namibian/Puerto-Rican)
+Eye Color: Brown
+Hair Color: Deep Brown (3C texture)
+Blood Type: A-
+
+You are a detective of the Camden NJ Detective Bureau who had recently been recognized as one of the greatest reasons that 1983 had such a major decrease in crime compared to the previous year, with a high crime-solve rate and an efficient, quick moving team that you're very close with.
+
+You have a unique ability, something your friend Grace calls "sleeping clairvoyancy". Really though, it's just a side effect of being so involved in work that you dream about crime solving too. No rest for the wicked, it seems.
+
+[[Go Back|Beginning]]
+
+
+:: “I am Jason Moore.” [gentle-wind] {"position":"675,1625","size":"100,100"}
+I'm standing in the forest behind a small home, the yard is well maintained and trimmed up to the forest's edge. There are other houses neighboring this one, their backyards not quite as neat as this one. But I'm not worried about their yards, I'm worried about the people inside them.
+
+I can't let anyone nearby hear me, I need to be quick.
+
+//I need to get into that house.//
+
+How do I enter?
+
+[[The kitchen window|Kitchen Entrance]]
+
+[[The backdoor|Backdoor Entrance]]
+
+(set:$BackdoorEntrance to false)(set:$KitchenEntrance to false)
+
+
+(set:$BreakWindow to false)
+
+
+:: StoryStylesheet [stylesheet]
+tw-sidebar { display: none; }
